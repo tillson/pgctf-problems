@@ -8,4 +8,4 @@ There's something off about this audio file, but I can't quite put my finger on 
 Flag
 ------------
 
-`I actually don't remember what I made the flag... can someone solve it?`
+`flag{back_h0me_well_sleep_b3tter}`
