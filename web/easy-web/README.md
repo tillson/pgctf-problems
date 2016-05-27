@@ -9,10 +9,10 @@ Description
 Flag
 ------------
 
-``
+`flag{just_getting_started}`
 
 
 
 todo:
 -------------
-* Make the problem
+* Finish making the problem
