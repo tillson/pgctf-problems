@@ -9,11 +9,10 @@ I've got 99 problems, but C ain't one.
 Flag
 ------------
 
-`I don't know`
+`flag{m1ddle_0ut_c0mpressi0n}`
 
 
 
 todo:
 -------------
-* Write the actual problems
-  * C99 upload
+* test the problem

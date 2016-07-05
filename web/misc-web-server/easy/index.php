@@ -4,9 +4,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>This is a server</h1>
+    <h1>Secure Login 1.0</h1>
     <hr>
-    I will do something later.
+    <input id="username" type="username" name="username" />
+    <input id="password" type="password" name="password" />
+    <button class="btn btn-info" onclick="submit()">Submit</button>
   </div>
+  <footer>
+    <script>
+    function submit() {
+
+    }
+    </script>
+  </footer>
 </body>
 </html>
