@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  h1 Login
+  form(action='/login' method='post')
+    input.form-control(name="username" placeholder="Username" style="width:50%; margin-bottom:10px")
+    input.form-control(name="password" type="password" placeholder="Password" style="width:50%")
+    br
+    input.btn.btn-primary(value="Login" type="submit")

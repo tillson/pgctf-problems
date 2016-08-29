@@ -51,13 +51,16 @@ app.get('/flag', function(req, res) {
 app.get('/login', function(req, res) {
   res.render('login')
 });
+app.get('/register', function(req, res) {
+  res.render('register')
+});
+
 app.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');
 });
-
-app.get('/register', function(req, res) {
+app.post('/register', function(req, res) {
   User.findOne({username: req.body.username}, function(result) {
     if (!result) {
       var user = new User();

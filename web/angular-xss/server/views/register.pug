@@ -1,8 +1,9 @@
 extends layout.pug
 
 block content
-  h1 register
+  h1 Register
   form(action='/register' method='post')
-    input
-    input
-    button Submit
+    input.form-control(name="username" placeholder="Username" style="width:50%; margin-bottom:10px")
+    input.form-control(name="password" type="password" placeholder="Password" style="width:50%")
+    br
+    input.btn.btn-primary(value="Register" type="submit")
