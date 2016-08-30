@@ -6,15 +6,15 @@
   <div class="container">
     <h1>Secure Login 1.0</h1>
     <hr>
-    <input id="username" class="form-control" placeholder="Username" style="width:40%; margin-bottom:5px;" type="username" name="username" />
-    <input id="password" class="form-control" placeholder="Password" style="width:40%; margin-bottom:20px;" type="password" name="password" />
+    <input id="username" type="username" name="username" />
+    <input id="password" type="password" name="password" />
     <button class="btn btn-info" onclick="submit()">Submit</button>
   </div>
   <footer>
     <script>
     function submit() {
       if (document.getElementById('username') == 'admin' && btoa(document.getElementById('password')) == 'aHVudGVyMg==') {
-        document.location.href = 'flag.php';
+        console.log('blah');
       }
     }
     </script>
