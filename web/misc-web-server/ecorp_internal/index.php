@@ -1,12 +1,13 @@
 <html>
 <head>
+  <title>ECorp Internal Login</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
   <div class="container">
     <h1>Secure Login 1.0</h1>
     <hr>
-    <div style="height:3em;">
+    <div style="height:2em;">
       <p id="error" style="color:red; display:none;"><p>
     </div>
     <input id="username" type="username" name="username" />
