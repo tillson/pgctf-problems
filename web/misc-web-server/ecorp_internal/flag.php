@@ -4,20 +4,12 @@
 </head>
 <body>
   <div class="container">
-    <h1>Secure Login 1.0</h1>
+    <h1>ECorp Flag Storage</h1>
     <hr>
-    <input id="username" type="username" name="username" />
-    <input id="password" type="password" name="password" />
-    <button class="btn btn-info" onclick="submit()">Submit</button>
+    <table class="table table-bordered">
+      <thead><tr><td>Creator</td><td>Flag</td></tr></thead>
+      <tr><td>Phillip Price</td><td>flag{b0nsoir_3lli0t}</td></td>
+    </table>
   </div>
-  <footer>
-    <script>
-    function submit() {
-      if (document.getElementById('username') == 'admin' && btoa(document.getElementById('password')) == 'aHVudGVyMg==') {
-        console.log('blah');
-      }
-    }
-    </script>
-  </footer>
 </body>
 </html>
