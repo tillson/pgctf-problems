@@ -1,2 +1,3 @@
 # robots.txt
-Disallow: /ecorp_internal/flag.php
+Disallow: /
+Disallow: /__b0nus_fl4g__
