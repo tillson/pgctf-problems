@@ -1,2 +1,0 @@
-Disallow: /*
-Disallow: /3aster_3gg
