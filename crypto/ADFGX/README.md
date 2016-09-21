@@ -12,8 +12,6 @@ Hint
 ------------
 1. I bet a grammar nazi wouldn't make capitolization errors!
 
-To do: add something about the keyword..
-
 Flag
 ------------
 placeholder
