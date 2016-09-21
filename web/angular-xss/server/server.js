@@ -68,6 +68,7 @@ app.post('/login',
     res.redirect('/');
 });
 app.post('/register', function(req, res) {
+  console.log('yes');
   if (!req.body.username || !req.body.password) {
     return res.redirect('/register?error=empty')
   }
