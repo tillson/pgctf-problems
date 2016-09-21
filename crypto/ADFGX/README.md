@@ -16,4 +16,5 @@ To do: add something about the keyword..
 
 Flag
 ------------
-`flag{adfgx_deutchland}` or `adfgx deutchland`
+placeholder
+
