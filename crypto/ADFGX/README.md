@@ -11,6 +11,7 @@ File: message.txt
 Hint
 ------------
 1. I bet a grammar nazi wouldn't make capitolization errors!
+2. I wonder if Fritz Nebel's devotion to the **German** name is important?
 
 Flag
 ------------
