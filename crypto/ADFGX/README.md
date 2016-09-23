@@ -1,5 +1,5 @@
 ## Cypher Double-Down
-crypto - 100 points
+crypto - 125 points
 
 Description
 ------------
