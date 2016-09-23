@@ -6,6 +6,9 @@ Description
 We found an ECorp internal server, but we can't seem to figure out how to get past the login...
 
 
+Internal description
+------------
+
 Flag
 ------------
 
