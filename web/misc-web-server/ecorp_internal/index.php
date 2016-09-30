@@ -22,7 +22,7 @@
       console.log('base64 of pass for auth: ' + btoa($('#password').val()));
       // END DEBUG CODE
       if ($('#username').val() == 'admin' && btoa($('#password').val()) == 'aHVudGVyMg==') {
-        document.location.href = './flag.php?password=' + atob('aHVudGVyMg==');
+        document.location.href = './auth.php?password=' + atob('aHVudGVyMg==');
       } else {
         $('#error').text('Invalid username or password.')
         $('#error').fadeIn(700).delay(3000).fadeOut(700);

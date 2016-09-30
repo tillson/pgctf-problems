@@ -9,6 +9,7 @@
     <table class="table table-bordered">
       <thead><tr><td>Creator</td><td>Flag</td></tr></thead>
       <tr><td>Phillip Price</td><td>flag{b0nsoir_3lli0t}</td></td>
+      <tr><td>Angela Moss</td><td>' DROP TABLE Students;-- </td></td>
     </table>
   </div>
 </body>
