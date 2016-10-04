@@ -90,6 +90,11 @@ app.get('/register', function(req, res) {
   res.render('register', {user: req.user});
 });
 
+app.get('/weekapaug', function(req, res) {
+  res.render('weeka', {user: req.user});
+});
+
+
 app.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {

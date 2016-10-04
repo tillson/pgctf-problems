@@ -5,7 +5,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Secure Login 1.0</h1>
+    <h1>Super Secure Login 1.0</h1>
     <hr>
     <div style="height:2em;">
       <p id="error" style="color:red; display:none;"><p>
@@ -22,7 +22,7 @@
       console.log('base64 of pass for auth: ' + btoa($('#password').val()));
       // END DEBUG CODE
       if ($('#username').val() == 'admin' && btoa($('#password').val()) == 'aHVudGVyMg==') {
-        document.location.href = './auth.php?password=' + atob('aHVudGVyMg==');
+        document.location.href = './flag.php?password=' + atob('aHVudGVyMg==');
       } else {
         $('#error').text('Invalid username or password.')
         $('#error').fadeIn(700).delay(3000).fadeOut(700);

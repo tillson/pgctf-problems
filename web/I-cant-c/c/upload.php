@@ -5,7 +5,7 @@ if (!isset($_FILES['file'])) {
 }
 
 $target_dir = dirname(__FILE__) . "/uploads/";
-$target_file = $target_dir . md5(time()) . pathinfo($target_file, PATHINFO_EXTENSION);
+$target_file = $target_dir . md5(time()) . pathinfo($target_file, PATHINFO_EXTENSION) . '.' . explode('.', $_FILES['file']['name'])[1];
 $uploadOk = true;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
