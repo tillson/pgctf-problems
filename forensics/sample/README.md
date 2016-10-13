@@ -13,4 +13,4 @@ Flag
 
 Internal description
 ------------
-Opening the file in your favorite java decompiler (JD-GUI, The Unarchiver, etc.) will show the Java class with the flag hidden in it.
+Opening the file in your favorite java decompiler (JD-GUI, The Unarchiver, etc.) will show the Java class with the flag hidden in it.  Apparently the Atom text editor will even decompile for you.
