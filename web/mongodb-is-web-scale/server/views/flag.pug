@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content
+  if user.typ
+    h1 flag{always_use_3scape_charact3rs}
+  else
+    h1 Only the admin can can see this page!
