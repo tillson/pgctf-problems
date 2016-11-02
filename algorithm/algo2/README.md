@@ -1,5 +1,5 @@
 ## Algorithm 2
-algorithm - 75 points
+algorithm - 125 points
 
 Description
 ------------
