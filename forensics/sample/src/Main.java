@@ -5,10 +5,9 @@ import java.io.*;
 public class Main
 {
 	public static void main (String[] args) {
-
+// java_is_n0t_s3cure
     String[] character = {"f", "l", "a", "g", "{", "j", "a",
-      "v", "a", "_", "0", "b", "f", "u", "s", "c", "a", "t", "i", "o", "n",
-      "_", "i", "s", "_", "h", "4", "r", "d", "}"};
+      "v", "a", "_" "}"};
     String theManMulcahey = character[0]; // I was taught a month ago...
 
     List<String> wordList = new ArrayList<String>();

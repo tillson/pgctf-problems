@@ -8,7 +8,7 @@ I lost a flag within my AP Computer Science 2016 answer... Can you find it?
 Flag
 ------------
 
-`flag{java_0bfuscation_is_h4rd}`
+`flag{java_is_n0t_s3cure}`
 
 
 Internal description
