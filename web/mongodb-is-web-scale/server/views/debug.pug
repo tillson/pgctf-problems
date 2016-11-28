@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content
+  h1 Debug - MongoDB Document for User
+  pre
+    #{ user }
+
+  if !user.user_type
+    p user_type field does not exist, so we will assume that he is a normal, non-admin user.
+  else if user.user_type != "admin"
+    p user_type exists, but is not 'admin', so the user is a normal user.

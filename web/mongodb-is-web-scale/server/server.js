@@ -6,23 +6,16 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var crypto = require('crypto');
 
-mongoose.connect('mongodb://localhost/angularxss');
+mongoose.connect('mongodb://localhost/webscale');
 var app = express();
 
 var User = mongoose.model('User', new Schema({
   username:  String,
-  password: String
-}, { collection: 'users' }));
-var Message = mongoose.model('Message', new Schema({
-  subject:  String,
-  message: String,
-  to: String,
-  from: String,
-  date: { type: Date, default: Date.now },
-}, { collection: 'messages' }));
-
-app.use(passport.initialize());
-app.use(passport.session());
+  password: String,
+  user_type: String,
+  bio: String,
+  color: String
+}, { strict: false, collection: 'users' }));
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -30,12 +23,8 @@ passport.use(new LocalStrategy(
       if (err) { return done(err); }
       if (!user) { return done(null, false); }
       if (crypto.createHash('sha256').update(password).digest('hex') != user.password) {
-        console.log('no!');
-        console.log(crypto.createHash('sha256').update(password).digest('hex'));
-        console.log(user.password);
         return done(null, false);
       }
-      console.log('almost')
       return done(null, user);
     });
   }
@@ -51,9 +40,11 @@ passport.deserializeUser(function(id, done) {
 
 app.use(require('express-session')({
     secret: 'your trip is short',
-    resave: false,
-    saveUninitialized: false
+    resave: true,
+    saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'pug');
 app.set('views',  __dirname + '/views');
@@ -68,11 +59,8 @@ app.get('/', function(req, res) {
   res.render('index', {user: req.user});
 });
 app.get('/flag', function(req, res) {
-  if (req.user && req.user.username == 'admin') {
-    res.render('flag', {user: req.user});
-  } else {
-    res.status(401).render('401', {user: req.user});
-  }
+  if (!req.user) return res.redirect('/?notLoggedIn');
+  res.render('flag', {user: req.user});
 });
 
 app.get('/messages', function(req, res) {
@@ -83,6 +71,11 @@ app.get('/messages', function(req, res) {
   }
 });
 
+app.get('/edit', function(req, res) {
+  if (!req.user) return res.redirect('/?notLoggedIn');
+  res.render('edit', {user: req.user});
+});
+
 app.get('/login', function(req, res) {
   res.render('login', {user: req.user});
 });
@@ -90,15 +83,16 @@ app.get('/register', function(req, res) {
   res.render('register', {user: req.user});
 });
 
-app.get('/weekapaug', function(req, res) {
-  res.render('weeka', {user: req.user});
+app.get('/debug', function(req, res) {
+  if (!req.user) return res.redirect('/?notLoggedIn');
+  res.render('debug', {user: req.user});
 });
 
 
 app.post('/login',
-  passport.authenticate('local', { failureRedirect: '/login' }),
+  passport.authenticate('local', { failureRedirect: '/login?failed' }),
   function(req, res) {
-    res.redirect('/');
+    res.redirect('/?success');
 });
 
 app.post('/register', function(req, res) {
@@ -116,7 +110,7 @@ app.post('/register', function(req, res) {
           res.redirect('/register?error');
         }
         passport.authenticate('local')(req, res, function () {
-          res.redirect('/');
+          res.redirect('/?success');
         });
       })
     } else {
@@ -125,6 +119,21 @@ app.post('/register', function(req, res) {
   });
 });
 
+app.post('/edit', function(req, res) {
+  User.findById(req.user._id, function(err, user) {
+    var keys = Object.keys(req.body);
+    for (var i = 0; i < keys.length; i++) {
+      user[keys[i]] = req.body[keys[i]];
+      console.log(keys[i] + '  ' + req.body[keys[i]]);
+    }
+    console.log(user);
+    user.save(function(err) {
+      if (err) throw err;
+      res.redirect('/edit?saved');
+    });
+
+  });
+});
 
 app.listen(8080, function() {
   console.log('Now listening on port 8080');

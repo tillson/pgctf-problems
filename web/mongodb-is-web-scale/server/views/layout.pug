@@ -1,7 +1,7 @@
 html
   head
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
-    title BitMessage - Messages, Reimagined.
+    title Flag Storage 2.0 - Flags, Reimagined
   body
   nav.navbar.navbar-inverse.navbar-fixed-top
     .container
@@ -11,13 +11,18 @@ html
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='#') BitMessage
+        a.navbar-brand(href='#') Flag Storage
       #navbar.collapse.navbar-collapse
         ul.nav.navbar-nav
-          li()
-            a(href='/') Home
           li
-            a(href='flag') Flag
+            a(href='/') Home
+          if user
+            li
+              a(href='/edit') Edit Profile
+          li
+            a(href='flag') Flags
+          //li
+            a(href='debug') Debug
         if !user
           ul.nav.navbar-nav.pull-right
             li
@@ -27,6 +32,6 @@ html
         else
           ul.nav.navbar-nav.pull-right
             li
-              a(href='#') #{ user }
+              a(href='#') #{ user.username }
   .container(style='padding-top:50px')
     block content

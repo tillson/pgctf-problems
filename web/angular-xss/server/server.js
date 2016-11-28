@@ -60,11 +60,10 @@ app.set('views',  __dirname + '/views');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/bootstrap',  express.static('./node_modules/bootstrap/dist/'));
-app.use('/angular',  express.static('./node_modules/angular/'));
+app.use('/bootstrap',  express.static('node_modules/bootstrap/dist/'));
+app.use('/angular',  express.static('node_modules/angular/'));
 
 app.get('/', function(req, res) {
-  console.log(req.user);
   res.render('index', {user: req.user});
 });
 app.get('/flag', function(req, res) {
