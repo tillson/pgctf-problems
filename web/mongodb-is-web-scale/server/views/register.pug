@@ -2,6 +2,14 @@ extends layout.pug
 
 block content
   h1 Register
+  if query["error"] == "usernameTaken"
+    .alert.alert-danger(role="alert")
+      b Error:
+      |  This username has already been registered.
+  if query["error"] == "blank"
+    .alert.alert-danger(role="alert")
+      b Error:
+      |  One or more fields are blank.
   form(action='/register' method='post')
     input.form-control(name="username" placeholder="Username" style="width:50%; margin-bottom:10px")
     input.form-control(name="password" type="password" placeholder="Password" style="width:50%")

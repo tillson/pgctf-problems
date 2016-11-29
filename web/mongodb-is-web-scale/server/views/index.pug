@@ -2,5 +2,17 @@ extends layout.pug
 
 block content
   .container
+    if query["success"] == "true"
+      br
+      .alert.alert-success(role="alert")
+        b Success:
+        |  You have successfully registered!
+    if query["error"] == "notLoggedIn"
+      br
+      .alert.alert-danger(role="alert")
+        b Error:
+        |  You have to be logged in to see that page.
+
+
     h1 Flag Storage 2.0
     p With our new NodeJS and MongoDB technology, we are now 500% more cyber-secure than before.

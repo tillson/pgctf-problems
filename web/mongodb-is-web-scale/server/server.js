@@ -55,37 +55,36 @@ app.use('/bootstrap',  express.static('./node_modules/bootstrap/dist/'));
 app.use('/angular',  express.static('./node_modules/angular/'));
 
 app.get('/', function(req, res) {
-  console.log(req.user);
-  res.render('index', {user: req.user});
+  res.render('index', {user: req.user, query: req.query});
 });
 app.get('/flag', function(req, res) {
-  if (!req.user) return res.redirect('/?notLoggedIn');
-  res.render('flag', {user: req.user});
+  if (!req.user) return res.redirect('/?error=notLoggedIn');
+  res.render('flag', {user: req.user, query: req.query});
 });
 
 app.get('/messages', function(req, res) {
   if (req.user) {
-    res.render('messages', {user: req.user});
+    res.render('messages', {user: req.user, query: req.query});
   } else {
-    res.status(401).render('401', {user: req.user});
+    res.status(401).render('401', {user: req.user, query: req.query});
   }
 });
 
 app.get('/edit', function(req, res) {
-  if (!req.user) return res.redirect('/?notLoggedIn');
-  res.render('edit', {user: req.user});
+  if (!req.user) return res.redirect('/?error=notLoggedIn');
+  res.render('edit', {user: req.user, query: req.query});
 });
 
 app.get('/login', function(req, res) {
-  res.render('login', {user: req.user});
+  res.render('login', {user: req.user, query: req.query});
 });
 app.get('/register', function(req, res) {
-  res.render('register', {user: req.user});
+  res.render('register', {user: req.user, query: req.query});
 });
 
 app.get('/debug', function(req, res) {
-  if (!req.user) return res.redirect('/?notLoggedIn');
-  res.render('debug', {user: req.user});
+  if (!req.user) return res.redirect('/?error=notLoggedIn');
+  res.render('debug', {user: req.user, query: req.query});
 });
 
 
@@ -100,7 +99,6 @@ app.post('/register', function(req, res) {
     return res.redirect('/register?error=empty')
   }
   User.findOne({username: req.body.username}, function(err, result) {
-    console.log(result);
     if (!result) {
       User.create({ username: req.body.username,
       password: crypto.createHash('sha256').update(req.body.password).digest('hex') },
@@ -110,7 +108,7 @@ app.post('/register', function(req, res) {
           res.redirect('/register?error');
         }
         passport.authenticate('local')(req, res, function () {
-          res.redirect('/?success');
+          res.redirect('/?success=true');
         });
       })
     } else {
@@ -124,9 +122,7 @@ app.post('/edit', function(req, res) {
     var keys = Object.keys(req.body);
     for (var i = 0; i < keys.length; i++) {
       user[keys[i]] = req.body[keys[i]];
-      console.log(keys[i] + '  ' + req.body[keys[i]]);
     }
-    console.log(user);
     user.save(function(err) {
       if (err) throw err;
       res.redirect('/edit?saved');
