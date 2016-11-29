@@ -5,10 +5,17 @@ import java.io.*;
 public class Main
 {
 	public static void main (String[] args) {
-// java_is_n0t_s3cure
-    String[] character = {"f", "l", "a", "g", "{", "j", "a",
-      "v", "a", "_" "}"};
-    String theManMulcahey = character[0]; // I was taught a month ago...
+		// obfuscated!
+    int[] list = {102, 108, 97, 103, 123, 106, 97, 118, 97, 102, 108, 97, 103,
+			123, 106, 97, 118, 97, 102, 108, 97, 103, 123, 106, 97, 118, 97, 95, 125};
+
+		String[] character = new String[list.length];
+
+		for (int i = 0; i < list.length; i++) {
+			character[i] = Character.toString((char)list[i]);
+		}
+
+    String theManMulcahey = character[0].toString(); // I was taught a month ago...
 
     List<String> wordList = new ArrayList<String>();
     wordList.add("AP");
