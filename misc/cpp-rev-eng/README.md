@@ -1,5 +1,5 @@
 ## Simple Reverse Engineering
-Trivia - 10 points
+Reverse Engineering - 25 points
 
 Description
 ------------
