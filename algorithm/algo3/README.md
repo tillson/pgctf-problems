@@ -1,5 +1,5 @@
 ## Algorithm 3
-algorithm - 300 points
+algorithm - 250 points
 
 Description
 ------------

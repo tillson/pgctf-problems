@@ -1,5 +1,5 @@
 ## Hello World!
-Trivia - 10 points
+Trivia - 25 points
 
 Description
 ------------

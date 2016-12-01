@@ -1,5 +1,5 @@
 ## Data Destroyer!
-Trivia - 10 points
+Trivia - 20 points
 
 Description
 ------------
@@ -10,6 +10,7 @@ Flag
 ------------
 
 `dd if=/dev/sda of=/dev/sdb`
+`dd of=/dev/sdb if=/dev/sda`
 
 
 Internal description

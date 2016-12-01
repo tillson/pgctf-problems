@@ -1,5 +1,5 @@
 ## Stegosaurus
-Forensics - 50 points
+Forensics - 100 points
 
 Description
 ------------

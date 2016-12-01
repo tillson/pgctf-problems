@@ -1,5 +1,5 @@
 ## The D in Detroit
-Forensics - 100 points
+Forensics - 250 points
 
 Description
 ------------

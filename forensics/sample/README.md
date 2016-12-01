@@ -1,5 +1,5 @@
 ## Sample in a .Jar
-Forensics - 50 points
+Forensics - 125 points
 
 Description
 ------------

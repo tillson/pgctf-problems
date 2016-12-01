@@ -1,5 +1,5 @@
 ## Simple Reverse Engineering
-Reverse Engineering - 25 points
+Reverse Engineering - 125 points
 
 Description
 ------------

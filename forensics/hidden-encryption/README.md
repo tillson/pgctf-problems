@@ -1,5 +1,5 @@
 ## Hidden Encryption
-Forensics - 50 points
+Forensics - 25 points
 
 Description
 ------------

@@ -1,5 +1,5 @@
 ## Cypher Double-Down
-crypto - 125 points
+crypto - 175 points
 
 Description
 ------------
@@ -16,4 +16,3 @@ Hint
 Flag
 ------------
 `flag{adfgx_deutchland}` or `adfgx deutchland`
-

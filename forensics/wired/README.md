@@ -1,5 +1,5 @@
 ## Wired
-Forensics - 75 points
+Forensics - 125 points
 
 Description
 ------------

@@ -1,5 +1,5 @@
 ## Tillson Galloway
-Recon - 100 points
+Recon - 200 points
 
 Description
 ------------
@@ -14,4 +14,4 @@ Flag
 
 Internal description
 ------------
-The flag will either be in my bio on the iSignedIn.com website or spelled out in a Spotify playlist
+The flag will be spelled out in the Spotify playlist on my profile called "PGCTF Mixtape."  This is meant to be a difficult problem
