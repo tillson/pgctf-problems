@@ -16,7 +16,8 @@ Reset the root password by editing the grub boot instructions:
 * once in the editor find the line that starts with `linux`
 * add `init=/bin/bash` to the end of that line
 * boot with the special boot instructions with `ctrl + x`
-* once in, make the system read/write, then run `passwd`
+* once in, make the system read/write by running `mount -n -o remount,rw /`
+* now that the system is read and write, you can run `passwd`
 
 Flag
 ------------
