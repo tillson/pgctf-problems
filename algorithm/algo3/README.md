@@ -1,4 +1,4 @@
-## Algorithm 3
+## Algorithm 2
 algorithm - 250 points
 
 Description

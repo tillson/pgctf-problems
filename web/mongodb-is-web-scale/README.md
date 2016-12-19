@@ -14,9 +14,4 @@ Flag
 
 Internal description
 ------------
-tri
-
-todo:
--------------
-* Write the actual problem
-  * insecure direct object reference
+MongoDB database updates in many production apps
