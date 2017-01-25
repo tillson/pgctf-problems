@@ -15,7 +15,7 @@ if (!isset($_COOKIE['userType'])) {
       <p>You are not authorized to see this page.</p>
     <?php } else { ?>
       <h1>Authorized!</h1>
-      <p>The flag is flag{something}</p>
+      <p>The flag is flag{y0u_st0le_th3_c00kies}</p>
     <?php } ?>
   </div>
 </body>
