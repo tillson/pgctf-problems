@@ -6,8 +6,7 @@ public class Main
 {
 	public static void main (String[] args) {
 		// obfuscated!
-    int[] list = {102, 108, 97, 103, 123, 106, 97, 118, 97, 102, 108, 97, 103,
-			123, 106, 97, 118, 97, 102, 108, 97, 103, 123, 106, 97, 118, 97, 95, 125};
+    int[] list = { 102, 108, 97, 103, 123, 106, 97, 118, 97, 95, 105, 115, 95, 110, 48, 116, 95, 115, 51, 99, 117, 114, 101, 125 };
 
 		String[] character = new String[list.length];
 
