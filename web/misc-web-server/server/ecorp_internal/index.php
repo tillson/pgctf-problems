@@ -18,6 +18,9 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script>
     function submit() {
+      // DEBUG CODE (REMOVE BEFORE PUSHING TO PRODUCTION)
+      console.log('base64 of pass for auth: ' + btoa($('#password').val()));
+      // END DEBUG CODE
       if ($('#username').val() == 'admin' && btoa($('#password').val()) == 'aHVudGVyMg==') {
         document.location.href = './flag.php?password=' + atob('aHVudGVyMg==');
       } else {
