@@ -11,11 +11,11 @@ Can you help me find out what that is?
 
 Hint
 ------------
-*No Hint*
+Theres a password. Think OWASP.
 
 Internal Description
 ------------
-Put the stream into your web browser, and run the `strings` command on the file to find the zip password.
+Put the stream into your web browser, and a ZIP file will be downloaded. Run unzip on the file, and you'll be presented with a password field. The password (put there to encrypt the file making it invisible to the `strings` command) is `123456`. This can be found in an OWASP top 10 most common passwords list.
 
 Flag
 ------------
