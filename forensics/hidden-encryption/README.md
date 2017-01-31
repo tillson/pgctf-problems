@@ -11,7 +11,7 @@ Can you help me find out what that is?
 
 Hint
 ------------
-Theres a password. Think OWASP.
+Think OWASP.
 
 Internal Description
 ------------
