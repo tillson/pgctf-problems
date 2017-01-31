@@ -9,7 +9,14 @@ I found this in a TCP stream on my network but I don't know what it means:
 
 Can you help me find out what that is?
 
+Hint
+------------
+*No Hint*
+
+Internal Description
+------------
+Put the stream into your web browser, and run the `strings` command on the file to find the zip password.
+
 Flag
 ------------
-
 `flag{3z_data_4_y0u}`

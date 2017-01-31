@@ -21,7 +21,7 @@ app.get('/:name', function(req, res) {
   }
 
   if (flagPage == req.params.name) {
-    res.send('flag{flag}');
+    res.send('flag{c0ding_1s_c00l}');
   }
 });
 

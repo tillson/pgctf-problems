@@ -22,4 +22,4 @@ Flag Page - /cff436cf69d77a3bb9f374c04ed0ec23
 
 Flag
 ------------
-*not sure yet*
+flag{c0ding_1s_c00l}
