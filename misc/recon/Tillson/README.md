@@ -9,9 +9,10 @@ My name is Tillson Galloway.
 Flag
 ------------
 
-`flag{y0u_f0und_me}`
+`melomania`
 
 
 Internal description
 ------------
-The flag will be spelled out in the Spotify playlist on my profile called "PGCTF Mixtape."  This is meant to be a difficult problem
+A google search of "Tillson Galloway" reveals a few things- including a message on my Twitter that the ~~stalker~~ searcher used as confirmation that Googling was the way to solve this problem.
+Looking further through the results will lead you to Tillson's Spotify account, and then a playlist [CTF Mixtape](https://open.spotify.com/user/tillsongalloway/playlist/5P2YqdjPPMwITrYT1buFe7), where "THE FLAG IS MELOMANIA" is spelled out with the first letter of each song name.
